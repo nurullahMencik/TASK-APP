@@ -34,37 +34,36 @@ Proje, frontend ve backend olmak üzere iki ana bölümden oluşan bir monorepo 
 **Genel Yapı:**
 
 proje-ana-dizini/
-├── frontend/
-│   ├── app/                    # Next.js uygulaması
-│   │   ├── (auth)/             # Kimlik doğrulama sayfaları (login, register)
-│   │   ├── create-project/     # Proje oluşturma sayfası
-│   │   ├── projects/           # Proje listeleme ve detay sayfaları
-│   │   │   ├── [id]/           # Dinamik proje ID'si
-│   │   │   │   ├── page.jsx    # Proje detay sayfası
-│   │   │   │   └── edit/page.jsx # Proje düzenleme sayfası
-│   │   ├── tasks/              # Görev listeleme ve detay sayfaları
-│   │   │   ├── [id]/           # Dinamik görev ID'si
-│   │   │   │   ├── page.jsx    # Görev detay sayfası
-│   │   │   │   ├── edit/page.jsx # Görev düzenleme sayfası
-│   │   │   │   └── logs/page.jsx # Görev logları sayfası (yeni eklenen)
-│   │   ├── components/         # Yeniden kullanılabilir React bileşenleri
-│   │   ├── globals.css         # Global CSS stilleri
-│   │   ├── layout.jsx          # Ana layout dosyası
-│   │   └── page.jsx            # Ana giriş sayfası
-│   ├── public/                 # Statik dosyalar
-│   ├── package.json
-│   └── tailwind.config.js
-├── backend/ (veya server/)
-│   ├── config/                 # Veritabanı bağlantı ayarları (db.js)
-│   ├── controllers/            # API mantığı ve işleyici fonksiyonlar (userController, 
-|   ├──                             projectController, taskController, logController)
-│   ├── middleware/             # Kimlik doğrulama ve hata işleme middleware'leri (authMiddleware,      ├   ├──                               errorHandler)
-│   ├── models/                 # Mongoose şema ve modelleri (User, Project, Task, Log)
-│   ├── routes/                 # API rotaları (userRoutes, projectRoutes, taskRoutes, logRoutes)
-│   ├── .env                    # Ortam değişkenleri
-│   ├── server.js               # Ana Node.js sunucu dosyası
-│   └── package.json
-└── README.md                   
+├── frontend/                     # Next.js istemci uygulaması
+│   ├── app/                      # Next.js uygulaması (App Router kullanır)
+│   │   ├── (auth)/               # Kimlik doğrulama sayfaları (login, register vb.)
+│   │   ├── create-project/       # Yeni proje oluşturma arayüzü
+│   │   ├── projects/             # Proje listeleme ve detay görünümleri
+│   │   │   ├── [id]/             # Dinamik proje ID'sine göre detay sayfaları
+│   │   │   │   ├── page.jsx      #   - Proje detay sayfası
+│   │   │   │   └── edit/page.jsx #   - Proje düzenleme sayfası
+│   │   ├── tasks/                # Görev listeleme ve detay görünümleri
+│   │   │   ├── [id]/             # Dinamik görev ID'sine göre detay sayfaları
+│   │   │   │   ├── page.jsx      #   - Görev detay sayfası
+│   │   │   │   ├── edit/page.jsx #   - Görev düzenleme sayfası
+│   │   │   │   └── logs/page.jsx #   - Görev logları sayfası
+│   │   ├── components/           # Uygulama genelinde kullanılan yeniden kullanılabilir React bileşenleri
+│   │   ├── globals.css           # Global CSS stilleri
+│   │   ├── layout.jsx            # Uygulamanın ana düzen (layout) dosyası
+│   │   └── page.jsx              # Ana giriş sayfası (root page)
+│   ├── public/                   # Statik dosyalar (resimler, fontlar vb.)
+│   ├── package.json              # Frontend bağımlılıkları ve scriptleri
+│   └── tailwind.config.js        # Tailwind CSS yapılandırma dosyası
+├── backend/                      # Node.js (Express) sunucu uygulaması
+│   ├── config/                   # Veritabanı bağlantı ayarları (örn. db.js)
+│   ├── controllers/              # API mantığı ve işleyici fonksiyonlar (userController, projectController, taskController, logController)
+│   ├── middleware/               # Kimlik doğrulama (authMiddleware) ve hata işleme (errorHandler) middleware'leri
+│   ├── models/                   # Mongoose şema ve modelleri (User, Project, Task, Log)
+│   ├── routes/                   # API rotaları (userRoutes, projectRoutes, taskRoutes, logRoutes)
+│   ├── .env                      # Ortam değişkenleri (veritabanı bağlantısı, secret keyler vb.)
+│   ├── server.js                 # Ana Node.js sunucu dosyası
+│   └── package.json              # Backend bağımlılıkları ve scriptleri
+└── README.md                     # Bu README dosyası               
 
 
 ## ✨ Ekstra Özellikler
