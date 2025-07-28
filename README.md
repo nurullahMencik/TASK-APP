@@ -33,7 +33,7 @@ Proje, Client ve Server olmak üzere iki ana bölümden oluşan bir monorepo vey
 
 **Genel Yapı:**
 
-proje-ana-dizini/
+```proje-ana-dizini/
 ├── Client/                     # Next.js istemci uygulaması
 │   ├── app/                      # Next.js uygulaması (App Router kullanır)
 │   │   ├── (auth)/               # Kimlik doğrulama sayfaları (login, register vb.)
@@ -63,7 +63,7 @@ proje-ana-dizini/
 │   ├── .env                      # Ortam değişkenleri (veritabanı bağlantısı, secret keyler vb.)
 │   ├── server.js                 # Ana Node.js sunucu dosyası
 │   └── package.json              # Backend bağımlılıkları ve scriptleri
-└── README.md                     # Bu README dosyası               
+└── README.md                     # Bu README dosyası```               
 
 
 ## ✨ Ekstra Özellikler
