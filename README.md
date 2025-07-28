@@ -1,10 +1,7 @@
 ## TaskAPP
-Bu proje, [Projenizin kısa açıklaması, örneğin: bir görev yönetim sistemi, e-ticaret uygulaması, sosyal medya platformu vb.] olarak geliştirilmiştir.
 
 ## 🔗 Projenin Canlı Adresi (Deploy Linki)
-
-Bu uygulama [deploy edildiği platform, örn: Vercel, Netlify, Heroku vb.] üzerinde canlıya alınmıştır.
-Canlı adrese buradan ulaşabilirsiniz: [CANLI PROJE URL'Sİ BURAYA GELECEK]
+https://task-app-frontendd.vercel.app
 
 ## 🛠️ Kullanılan Teknolojiler
 
