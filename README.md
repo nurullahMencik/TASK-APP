@@ -29,12 +29,12 @@ Bu projenin geliştirilmesinde aşağıdaki temel teknolojiler ve kütüphaneler
 
 ## 🏛️ Mimari ve Proje Dizini
 
-Proje, frontend ve backend olmak üzere iki ana bölümden oluşan bir monorepo veya ayrı dizin yapısı kullanılarak geliştirilmiştir.
+Proje, Client ve Server olmak üzere iki ana bölümden oluşan bir monorepo veya ayrı dizin yapısı kullanılarak geliştirilmiştir.
 
 **Genel Yapı:**
 
 proje-ana-dizini/
-├── frontend/                     # Next.js istemci uygulaması
+├── Client/                     # Next.js istemci uygulaması
 │   ├── app/                      # Next.js uygulaması (App Router kullanır)
 │   │   ├── (auth)/               # Kimlik doğrulama sayfaları (login, register vb.)
 │   │   ├── create-project/       # Yeni proje oluşturma arayüzü
@@ -54,7 +54,7 @@ proje-ana-dizini/
 │   ├── public/                   # Statik dosyalar (resimler, fontlar vb.)
 │   ├── package.json              # Frontend bağımlılıkları ve scriptleri
 │   └── tailwind.config.js        # Tailwind CSS yapılandırma dosyası
-├── backend/                      # Node.js (Express) sunucu uygulaması
+├── Server/                      # Node.js (Express) sunucu uygulaması
 │   ├── config/                   # Veritabanı bağlantı ayarları (örn. db.js)
 │   ├── controllers/              # API mantığı ve işleyici fonksiyonlar (userController, projectController, taskController, logController)
 │   ├── middleware/               # Kimlik doğrulama (authMiddleware) ve hata işleme (errorHandler) middleware'leri
