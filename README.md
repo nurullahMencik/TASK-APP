@@ -31,32 +31,39 @@ Proje, Client ve Server olmak üzere iki ana bölümden oluşan bir monorepo vey
 **Genel Yapı:**
 
 ```proje-ana-dizini/
-├── Client/                     # Next.js istemci uygulaması
-│   ├── app/                      # Next.js uygulaması (App Router kullanır)
-│   │   ├── (auth)/               # Kimlik doğrulama sayfaları (login, register vb.)
-│   │   ├── create-project/       # Yeni proje oluşturma arayüzü
-│   │   ├── projects/             # Proje listeleme ve detay görünümleri
-│   │   │   ├── [id]/             # Dinamik proje ID'sine göre detay sayfaları
-│   │   │   │   ├── page.jsx      #   - Proje detay sayfası
-│   │   │   │   └── edit/page.jsx #   - Proje düzenleme sayfası
-│   │   ├── tasks/                # Görev listeleme ve detay görünümleri
-│   │   │   ├── [id]/             # Dinamik görev ID'sine göre detay sayfaları
-│   │   │   │   ├── page.jsx      #   - Görev detay sayfası
-│   │   │   │   ├── edit/page.jsx #   - Görev düzenleme sayfası
-│   │   │   │   └── logs/page.jsx #   - Görev logları sayfası
-│   │   ├── components/           # Uygulama genelinde kullanılan yeniden kullanılabilir React bileşenleri
-│   │   ├── globals.css           # Global CSS stilleri
-│   │   ├── layout.jsx            # Uygulamanın ana düzen (layout) dosyası
-│   │   └── page.jsx              # Ana giriş sayfası (root page)
-│   ├── public/                   # Statik dosyalar (resimler, fontlar vb.)
-│   ├── package.json              # Frontend bağımlılıkları ve scriptleri
-│   └── tailwind.config.js        # Tailwind CSS yapılandırma dosyası
-├── Server/                      # Node.js (Express) sunucu uygulaması
+├── Client/                             # Next.js istemci uygulaması
+│   ├── app/                            # Next.js uygulaması (App Router kullanır)
+│   │   ├── (auth)/                     # Kimlik doğrulama sayfaları (login, register vb.)
+│   │   │   ├── login/page.jsx          # - Giriş sayfası
+│   │   │   └── register/page.jsx       # - Kayıt sayfası
+│   │   ├── (routes)/                   # rotalar
+│   │   │   ├── create-project/page.jsx # Yeni proje oluşturma arayüzü
+│   │   │   ├── dashboard/page.jsx      # Yönetim paneli sayfası
+│   │   │   ├── projects/               # Proje listeleme ve detay görünümleri
+│   │   │   │   ├── page.jsx            # - Proje listeleme sayfası
+│   │   │   │   └── [id]/               # Dinamik proje ID'sine göre detay sayfaları
+│   │   │   │       ├── page.jsx        #   - Proje detay sayfası
+│   │   │   │       └── edit/page.jsx   #   - Proje düzenleme sayfası
+│   │   │   └── tasks/                  # Görev listeleme ve detay görünümleri
+│   │   │       ├── page.jsx            # - Görev listeleme sayfası
+│   │   │       └── [id]/               # Dinamik görev ID'sine göre detay sayfaları
+│   │   │           ├── page.jsx        #   - Görev detay sayfası
+│   │   │           ├── edit/page.jsx   #   - Görev düzenleme sayfası
+│   │   │           └── logs/page.jsx   #   - Görev logları sayfası
+
+│   │   ├── globals.css                 # Global CSS stilleri
+│   │   ├── layout.jsx                  # Uygulamanın ana düzen (layout) dosyası
+│   │   └── page.jsx                    # Ana giriş sayfası (root page)
+│   ├── components/                     # Uygulama genelinde kullanılan bileşenleri
+│   |── constans/                       # global değişkenler
+│   ├── package.json                    # Frontend bağımlılıkları ve scriptleri
+├── Server/                       # Node.js (Express) sunucu uygulaması
 │   ├── config/                   # Veritabanı bağlantı ayarları (örn. db.js)
-│   ├── controllers/              # API mantığı ve işleyici fonksiyonlar (userController, projectController, taskController, logController)
-│   ├── middleware/               # Kimlik doğrulama (authMiddleware) ve hata işleme (errorHandler) middleware'leri
+│   ├── controllers/              # API mantığı  (user,project, task, log   :Controller)
+│   ├── middleware/               # Kimlik doğrulama (auth) ve hata işleme (errorHandler) middleware'leri
 │   ├── models/                   # Mongoose şema ve modelleri (User, Project, Task, Log)
 │   ├── routes/                   # API rotaları (userRoutes, projectRoutes, taskRoutes, logRoutes)
+│   ├── utils/                    # generate token
 │   ├── .env                      # Ortam değişkenleri (veritabanı bağlantısı, secret keyler vb.)
 │   ├── server.js                 # Ana Node.js sunucu dosyası
 │   └── package.json              # Backend bağımlılıkları ve scriptleri
