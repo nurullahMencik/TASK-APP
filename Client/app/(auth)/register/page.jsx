@@ -11,7 +11,7 @@ export default function RegisterPage() {
         username: '',
         email: '',
         password: '',
-        role: 'developer', // Varsayılan rol
+        role: 'manager', // Varsayılan rol
     });
     // Hata/başarı mesajlarını göstermek için yeni state
     const [displayMessage, setDisplayMessage] = useState({ type: '', text: '' }); 

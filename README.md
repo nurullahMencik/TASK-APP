@@ -50,18 +50,17 @@ Proje, Client ve Server olmak üzere iki ana bölümden oluşan bir monorepo vey
 │   │   │           ├── page.jsx        #   - Görev detay sayfası
 │   │   │           ├── edit/page.jsx   #   - Görev düzenleme sayfası
 │   │   │           └── logs/page.jsx   #   - Görev logları sayfası
-
 │   │   ├── globals.css                 # Global CSS stilleri
 │   │   ├── layout.jsx                  # Uygulamanın ana düzen (layout) dosyası
 │   │   └── page.jsx                    # Ana giriş sayfası (root page)
 │   ├── components/                     # Uygulama genelinde kullanılan bileşenleri
-│   |── constans/                       # global değişkenler
-│   |── redux/                          # redux toolkit
+│   ├── constans/                       # global değişkenler
+│   ├── redux/                          # redux toolkit
 │   │   ├── slices/                     # slicelar
-│   │   │   ├── authSlice               # auth slice
-│   │   │   ├── logSlice                # log slice
-│   │   │   ├── authSlice               # auth slice
-│   │   │   ├── authSlice               # auth slice
+│   │   │   ├── authSlice.js            # auth slice
+│   │   │   ├── logSlice.js             # log slice
+│   │   │   ├── projectsSlice.js        # projects slice
+│   │   │   ├── taskSlice.js            # task slice
 │   │   ├── store.js                    # store dosyası
 │   ├── package.json                    # Frontend bağımlılıkları ve scriptleri
 ├── Server/                       # Node.js (Express) sunucu uygulaması
