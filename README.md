@@ -56,6 +56,13 @@ Proje, Client ve Server olmak üzere iki ana bölümden oluşan bir monorepo vey
 │   │   └── page.jsx                    # Ana giriş sayfası (root page)
 │   ├── components/                     # Uygulama genelinde kullanılan bileşenleri
 │   |── constans/                       # global değişkenler
+│   |── redux/                          # redux toolkit
+│   │   ├── slices/                     # slicelar
+│   │   │   ├── authSlice               # auth slice
+│   │   │   ├── logSlice                # log slice
+│   │   │   ├── authSlice               # auth slice
+│   │   │   ├── authSlice               # auth slice
+│   │   ├── store.js                    # store dosyası
 │   ├── package.json                    # Frontend bağımlılıkları ve scriptleri
 ├── Server/                       # Node.js (Express) sunucu uygulaması
 │   ├── config/                   # Veritabanı bağlantı ayarları (örn. db.js)
