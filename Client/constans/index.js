@@ -1,0 +1,1 @@
+export const API_BASE_URL = 'https://taskappbackend-j2zj.onrender.com/api';
