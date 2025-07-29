@@ -1,7 +1,7 @@
 ## TaskAPP
 
 ## 🔗 Projenin Canlı Adresi (Deploy Linki)
-https://task-app-frontendd.vercel.app
+https://task-app-frontendd-139r.vercel.app/
 
 ## 🛠️ Kullanılan Teknolojiler
 
